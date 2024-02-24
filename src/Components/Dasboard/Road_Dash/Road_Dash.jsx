@@ -13,21 +13,25 @@ const Road_Dash = () => {
       <div className='safety__Dashboard-Road'>
         <div className='safety__Dashboard-Road-vedio'>
           <h1>Demo Video</h1>
+          <div className='dash-head-help'></div>
           <video controls autoPlay>
             <source src={vedio_road} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
         <div className='safety__Dashboard-Road-OriginalImg'>
-          <h2>Original images</h2>
+          <h2>Model images</h2>
+          <div className='original-head-help'></div>
         </div>
         <div className="safety__Dashboard-Road-ModelImage">
           {img.map((image, index) => (
             <img key={index} src={image} alt={`Image ${index}`} />
           ))}
         </div>
+        <div className='safety__Dashboard-Class'>
         <div className='safety__Dashboard-Road-ClassList'>
           <h2>Classes List</h2>
+          <div className='classlist-head-help'></div>
              <ul>
                 <li>Opening Eye</li>
                 <li>Closed Eye</li>
@@ -38,7 +42,9 @@ const Road_Dash = () => {
         </div>
         <div className='safety__Dashboard-Road-Labels'>
           <h2>Labels Diagram</h2>
+          <div className='labels-head-help'></div>
           <img src={road_labels} alt='label-diagram'></img>
+        </div>
         </div>
       </div>
   )

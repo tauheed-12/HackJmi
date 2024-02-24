@@ -135,11 +135,14 @@
     .safety__Header-Content button{
         width: 200px;
     }
+    .safety__Header-Content{
+        top: 15%;
+    }
 }
 
 @media screen and (max-width:1050px) {
     .safety__Header-Content{
-        top: 10%;
+        top: 15%;
         display: none;
     }
 }

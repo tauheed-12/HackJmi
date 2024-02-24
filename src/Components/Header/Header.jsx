@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from "../../Assets/banner.jpg"
+import { Link } from 'react-router-dom'
 import "./Header.css"
 const Header = () => {
   return (
@@ -11,8 +12,12 @@ const Header = () => {
         <h1>Ensuring Safety Every Step of the Way</h1>
         <h3>Construction Site & Road Monitoring System</h3>
          <div className='safety__Header-button'>
+         <Link to='/road_safety_dashboard'>
           <button type='button'>Dashboards(Road) →</button>
+          </Link>
+          <Link to='/construction_dashboard'>
           <button type='button'>Dashboards(Construction) →</button>
+          </Link>
           </div>
       </div>
     </div>

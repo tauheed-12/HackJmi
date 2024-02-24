@@ -7,7 +7,7 @@ import Road_P2 from "../../Assets/Road_P2.jpg";
 import Road_P3 from "../../Assets/Road_P3.jpg";
 import Road_P4 from "../../Assets/Road_P4.jpg";
 import Road_P5 from "../../Assets/Road_P5.jpg";
-
+import { Link } from 'react-router-dom';
 const Road_Safety = () => {
   const images = [Road_P1, Road_P2, Road_P3, Road_P4, Road_P5];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -33,7 +33,9 @@ const Road_Safety = () => {
         <div className='safety__Road-Para'>
         <p>This model is also based on YOLOV8 like our previous construction site safety model. Our road safety model focuses on detecting several key factors that significantly impact safety on the road</p>
         <p>Seatbelt Usage, Distracted Driving, Smoking While Driving, Monitoring Eye State</p>
+        <Link to='/road_safety_dashboard'>
         <button>Dashboard <span id='arrow-road'>→</span></button>
+        </Link>
         </div>
       </div>
     </div>

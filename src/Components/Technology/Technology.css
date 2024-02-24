@@ -21,7 +21,12 @@
     padding: 2rem;
     margin: 3rem;
 }
-
+.safety__Technology-div1-Tech1 p,
+.safety__Technology-div1-Tech2 p,
+.safety__Technology-div2-Tech1 p,
+.safety__Technology-div2-Tech2 p{
+    font-size: 1.2rem;
+}
 .safety__Technology-intro {
     width: 30%;
     margin-left: 3rem;
@@ -32,7 +37,7 @@
 }
 
 .safety__Technology-intro p {
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 1070px) {

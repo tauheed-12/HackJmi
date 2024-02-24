@@ -1,0 +1,184 @@
+.safety__Dashboard-Construction {
+    width: 100%;
+    padding: 2rem 0rem;
+}
+.dashc-head-help{
+    height: 10px;
+    background-color: darkblue;
+    width: 10%;
+    margin-bottom: 2rem;
+    transition: width 0.3s ease-in;
+}
+.dashc-head-help:hover{
+    width: 20%;
+}
+.safety__Dashboard-Construction-vedio h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.safety__Dashboard-Construction-vedio {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+.safety__Dashboard-Construction-vedio video {
+    width: 60%;
+    height: 100%;
+    box-shadow: 3px 3px 15px grey;
+    border: 5px solid grey;
+    border-radius: 10px;
+}
+.safety__Dashboard-Construction-OriginalImg{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.safety__Dashboard-Construction-OriginalImg h2{
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.safety__Dashboard-Construction-ModelImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.safety__Dashboard-Construction-ModelImage img{
+    box-shadow: 9px 9px 15px grey;
+    width: 600px;
+    border-radius: 10px;
+}
+.safety__Dashboard-Construction-HeadImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.original-headc-help{
+    width: 10%;
+    height: 10px;
+    background-color: darkblue;
+    transition: width 0.3s ease-in;
+}
+.original-headc-help:hover{
+    width: 20%;
+}
+.safety__Dashboard-Construction-Class{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 0rem;
+    flex-wrap: wrap;
+}
+
+.safety__Dashboard-Construction-ClassList{
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.safety__Dashboard-Construction-ClassList h2{
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+.classlist-head-help{
+    height: 10px;
+    width: 15%;
+    margin-bottom: 2rem;
+    background-color: darkblue;
+    transition: width 0.3s ease-in;
+}
+.classlist-head-help:hover{
+   width:25%
+}
+.safety__Dashboard-Construction-ClassList li{
+    font-size: 2.5rem;
+    background-color: blue;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    color: white;
+    list-style: circle;
+    margin-bottom: 5px;
+}
+.safety__Dashboard-Construction-Labels{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.safety__Dashboard-Construction-Labels h2{
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+.safety__Dashboard-Construction-Labels img{
+    max-width: 60%;
+    height: auto;
+    box-shadow: 6px 6px 15px grey;
+}
+.safety__Dashboard-Construction ul{
+    margin-left: 0;
+}
+.labels-head-help{
+    width: 15%;
+    height: 10px;
+    margin-bottom: 2rem;
+    background-color: darkblue;
+    transition: width 0.3s ease-in;
+}
+.labels-head-help:hover{
+    width: 25%;
+}
+
+@media screen and (max-width:1250px) {
+    .safety__Dashboard-Construction-ModelImage img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .safety__Dashboard-Construction-vedio video{
+         width: 90%;
+    }
+    .safety__Dashboard-Construction-ModelImage img{
+        width: 300px;
+    }
+    .safety__Dashboard-Construction-ClassList li{
+        font-size: 20px;
+        align-self: center;
+    }
+    .safety__Dashboard-Construction h2{
+        font-size: 26px;
+    }
+    .safety__Dashboard-Construction-Class{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .safety__Dashboard-Construction h1{
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .safety__Dashboard-Construction-ModelImage img{
+        width: 200px;
+    }
+    .safety__Dashboard-Construction-ClassList li{
+        font-size: 16px;
+    }
+    .safety__Dashboard-Construction-ClassList h2{
+        font-size: 18px;
+    }
+}

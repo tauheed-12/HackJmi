@@ -6,6 +6,7 @@ import less_than from "../../Assets/less-than-symbol.png";
 import Const_P1 from "../../Assets/Const_P1.jpg";
 import Const_P2 from "../../Assets/Const_P2.jpg";
 import Const_P3 from "../../Assets/Const_P3.jpg";
+import { Link } from 'react-router-dom';
 // import Const_P4 from "../../Assets/Const_P4.jpg";
 // import Const_P5 from "../../Assets/Const_P5.jpg";
 
@@ -35,7 +36,9 @@ const Construction_Safety = () => {
         <p>
         The You Only Look Once version 8 YOLOv8 is a state-of-the-art object detection algorithm renowned for its accuracy and efficiency in real-time object detection tasks. By harnessing the power of YOLOv8, we aim to develop a robust safety model capable of identifying potential hazards, equipment, and personnel within the construction site environment.
         </p>
+        <Link to='/construction_dashboard'>
         <button>Dashboard →</button>
+        </Link>
         </div>
       </div>
       <div className='safety__Construction-Img'>
