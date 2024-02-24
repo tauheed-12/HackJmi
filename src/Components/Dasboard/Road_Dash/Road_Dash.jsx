@@ -11,6 +11,10 @@ const Road_Dash = () => {
   const img = [Road_P1, Road_P2, Road_P3, Road_P4, Road_P5];
   return (
       <div className='safety__Dashboard-Road'>
+        <div className='stream'>
+      <h1>Live Streaming</h1>
+      <img src="http://127.0.0.1:5000/video_feed_road" width="600" height="480" />
+      </div>
         <div className='safety__Dashboard-Road-vedio'>
           <h1>Demo Video</h1>
           <div className='dash-head-help'></div>

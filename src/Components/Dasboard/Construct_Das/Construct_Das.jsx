@@ -13,6 +13,10 @@ const Construct_Das = () => {
   const img = [img1, img2, img3, img4, img5, img6, img7]
   return (
     <div className='safety__Dashboard-Construction'>
+            <div className='stream'>
+      <h1>Live Streaming</h1>
+      <img src="http://127.0.0.1:5000/video_feed_construction" width="600" height="480" />
+      </div>
         <div className='safety__Dashboard-Construction-vedio'>
           <h1>Demo Video</h1>
           <div className='dashc-head-help'></div>

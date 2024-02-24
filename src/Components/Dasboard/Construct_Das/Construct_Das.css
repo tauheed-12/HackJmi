@@ -141,6 +141,13 @@
     width: 25%;
 }
 
+.stream{
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width:1250px) {
     .safety__Dashboard-Construction-ModelImage img{
         width: 400px;
