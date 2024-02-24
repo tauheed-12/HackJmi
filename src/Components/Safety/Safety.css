@@ -1,0 +1,81 @@
+.safety__Safety {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.safety__Safety-heading {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.safety__Safety-Models {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.safety__Safety-Models img{
+    width: 60px;
+    height: 60px;
+}
+.safety__Safety-Models_Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    border-radius: 5px;
+    flex: 1;
+    margin: 2rem 4rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgb(189, 187, 187);
+}
+.safety__Safety-Models_Container p{
+    font-size: 1.3rem;
+    color: gray;
+}
+.safety__Safety-Models_Container h3{
+    color: darkblue;
+    font-size: 1.8rem;
+}
+.safety__Safety-Models_Construction-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+
+.safety__Safety-Models_Construction:hover,
+.safety__Safety-Models_Road:hover {
+    margin-top: 1rem;
+    transition: margin-top 0.3s ease;
+}
+
+.safety__Safety-Models_Construction-button button {
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    background-color: rgb(85, 85, 152);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .safety__Safety-Models img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 623px) {
+    .safety__Safety-Models_Construction-button {
+        gap: 10px;
+    }
+}

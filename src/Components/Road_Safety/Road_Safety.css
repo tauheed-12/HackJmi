@@ -1,0 +1,107 @@
+.safety__Road{
+    display: flex;
+    padding: 2rem 2rem;
+    /* background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%); */
+}
+
+.safety__Road-Content{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding: 2rem 4rem;
+    margin: 2rem 4rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.safety__Road-Img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    flex: 1;
+}
+.safety__Road-Img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.safety__Road-Content h3{
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom:0 ;
+    padding: 0 2rem;
+    padding-left: 0;
+}
+#symbol-left,
+#symbol-right{
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    background-color: rgb(255,255,255, 0.2);
+    cursor: pointer;
+}
+#symbol-left{
+    margin-right: -50px;
+}
+#symbol-right{
+    margin-left: -50px;
+}
+.safety__Road-Content p{
+    padding:0 2rem;
+    font-size: 1.4rem;
+    color: #fff;
+}
+.safety__Road-Content button{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: blue;
+    margin: 0 2rem;
+}
+#heads-help{
+    height: 10px;
+    width: 15%;
+    margin-bottom: 2rem;
+    background-color: darkblue;
+}
+.safety__Road-Para{
+    padding: 3rem 2rem;
+    background-color: rgb(99, 99, 209);
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px rgb(145, 159, 241);
+}
+
+@media screen and (max-width: 1250px){
+    .safety__Road{
+        width: 100%;
+        padding: 0;
+    }
+    .safety__Road-Content{
+        padding: 1rem 0rem;
+        margin: 1rem 0rem;
+    }
+    .safety__Road-Img{
+        padding: 2rem 2rem;
+     }
+}
+
+@media screen and (max-width: 930px) {
+    .safety__Road{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .safety__Road-Img{
+
+    }
+}
+
+@media screen and (max-width: 623px){
+    .safety__Road-Content{
+        padding: 1rem 0rem;
+        margin: 0;
+    }
+}

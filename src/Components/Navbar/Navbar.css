@@ -1,0 +1,16 @@
+.safety__Navbar{
+    width: 100%;
+    /* background-color: rgb(87, 71, 196); */
+    transition: background-color 0.3s ease;
+}
+.navbar__scrolled{
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+}
+.safety__Navbar-logo{
+    width: 100%;
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+}
