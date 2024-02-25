@@ -2,13 +2,13 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap-reverse;
-    padding: 4rem 0rem;
+    padding: 2.5rem 0rem;
     justify-content: center;
     align-items: center;
 }
 
 .safety__Technology-div2 {
-    padding-top: 3rem;
+    padding-top: 2rem;
 }
 
 .safety__Technology-div1-Tech1,
@@ -25,19 +25,19 @@
 .safety__Technology-div1-Tech2 p,
 .safety__Technology-div2-Tech1 p,
 .safety__Technology-div2-Tech2 p{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .safety__Technology-intro {
     width: 30%;
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 
 .safety__Technology-intro h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .safety__Technology-intro p {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 @media screen and (max-width: 1070px) {

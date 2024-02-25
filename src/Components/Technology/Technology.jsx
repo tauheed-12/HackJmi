@@ -19,8 +19,8 @@ const Technology = () => {
               <p>Ultralytics YOLOv8 is a cutting-edge, state-of-the-art (SOTA) model that builds upon the success of previous YOLO versions and introduces new features.</p>
            </div>
            <div className='safety__Technology-div2-Tech2'>
-              <h1>Flask</h1>
-              <p> Python microframework for building web applications with simplicity, flexibility, and easy integration of extensions for various functionalities.</p>
+              <h1>Google Colab</h1>
+              <p>Cloud-based Jupyter notebooks for collaborative coding, free GPU access, and seamless integration with Google Drive. </p>
            </div>
       </div>
       <div className='safety__Technology-intro'>

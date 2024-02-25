@@ -19,7 +19,7 @@
     padding: 0 2rem;
 }
 .safety__Dashboard-Road-vedio h1{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 5px;
 }
@@ -35,8 +35,8 @@
     padding-right: 0;
 }
 .safety__Dashboard-Road-vedio h1{
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 .safety__Dashboard-Road-vedio video {
     width: 100%;
@@ -53,46 +53,45 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 .safety__Dashboard-Road-OriginalImg h2{
-    font-size: 3rem;
+    font-size: 1.8rem;
     margin-bottom: 5px;
 }
 .safety_button_form{
     display: flex;
-    align-items: center;
     height: 100px;
-    padding: 2rem 0;
-    margin: 2rem;
-    justify-content: center;
+    padding: 1rem 0;
+    margin: 1rem;
     gap: 10%;
 }
 .live__stream_button button{
-    width: 400px;
-    height: 100px;
+    width: 200px;
+    height: 50px;
     background-color: blue;
     cursor: pointer;
     color: whitesmoke;
-    font-size: 3rem;
+    font-size: 1.5rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .upload_images{
     height: 50px;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 .upload_images input{
      width: 300px;
-     height: 50px;
-     font-size: 2rem;
+     height: 40px;
+     font-size: 1.4rem;
 }
 .upload_images button{
     width: 200px;
-    height: 80px;
+    height: 50px;
     color: white;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 18px;
+    padding: 1rem 1rem;
     cursor: pointer;
     background-color: blue;
     border: none;
@@ -108,11 +107,11 @@
     flex-wrap: wrap;
 }
 .safety__Dashboard-Road-ModelImage h2{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
 }
 .safety__Dashboard-Road-ModelImage img{
     box-shadow: 9px 9px 15px grey;
-    width: 800px;
+    width: 600px;
     height: auto;
     border-radius: 10px;
 }
@@ -146,7 +145,7 @@
      align-items: center;
 }
 .safety__Dashboard-Road-ClassList h2{
-    font-size: 3rem;
+    font-size: 1.8rem;
     margin-bottom: 5px;
 }
 .classlist-head-help{
@@ -160,7 +159,7 @@
    width:25%
 }
 .safety__Dashboard-Road-ClassList li{
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     padding: 1rem 3rem;
     border-radius: 5px;
     list-style: circle;
@@ -174,11 +173,11 @@
     align-items: center;
 }
 .safety__Dashboard-Road-Labels h2{
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 5px;
 }
 .safety__Dashboard-Road-Labels img{
-    max-width: 60%;
+    max-width: 600px;
     height: auto;
     box-shadow: 6px 6px 15px grey;
 }
@@ -213,12 +212,12 @@
         font-size: 20px;
     }
     .upload_images input{
-        font-size: 20px;
+        font-size: 18px;
     }
     .upload_images button{
         width: 200px;
         height: 40px;
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -230,11 +229,11 @@
         width: 300px;
     }
     .safety__Dashboard-Road-ClassList li{
-        font-size: 20px;
+        font-size: 18px;
         align-self: center;
     }
     .safety__Dashboard-Road h2{
-        font-size: 26px;
+        font-size: 22px;
     }
     .safety__Dashboard-Road-Class{
         flex-direction: column;
@@ -242,7 +241,10 @@
         justify-content: center;
     }
     .safety__Dashboard-Road h1{
-        font-size: 26px;
+        font-size: 22px;
+    }
+    .safety__Dashboard-Road-Labels img{
+        width: 300px;
     }
 }
 
