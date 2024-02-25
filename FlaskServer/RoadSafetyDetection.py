@@ -1,0 +1,84 @@
+from ultralytics import YOLO
+import numpy as np
+import time
+import cv2
+
+class_labels = {
+    0: ['Open-Eye', (57, 47, 140)],
+    1: ['Closed-Eye',(231,236,239)],
+    2: ['Cigarette',(57, 47, 140)],
+    3: ['Phone',(231,236,239)],
+    4: ['Seatbelt',(0,0,255)]
+}
+
+
+model = YOLO("roadSafetyModel.pt")
+
+def custom_yolo_detection(frame):
+    results=model.predict(source=frame, conf=0.3, verbose=False)
+    return results
+
+
+def annotate_frame(frame, detection_results):  
+    global class_count
+    thickness = 2
+    
+    for result in detection_results:
+        #class_labels=result.names                                             #To use when class names unknown, adds extra computation
+        classes_present=result.boxes.cls.tolist()
+        bbox = result.boxes.xyxy.tolist()  
+        confidences=result.boxes.conf.tolist()
+        class_count = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0}
+        for (class_id, xyxy, conf) in zip(classes_present, bbox, confidences):
+            class_count[class_id] += 1
+            class_name=class_labels[class_id][0]                                 #Detected class names
+            x1, y1, x2, y2 = [int(xyxy[i]) for i in range(4)] 
+            confidence = str(round(conf,2))
+            color=class_labels[class_id][1]
+
+
+            cv2.rectangle(frame, (x1, y1), (x2, y2), color, thickness)
+
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            font_scale = 0.5
+            font_thickness = 1
+            text_size = cv2.getTextSize(class_name, font, font_scale, font_thickness)[0]
+            text_x = x1
+            text_y = y1 - 10                                                       #Label location adjustment
+            cv2.putText(frame, class_name + ' ' + confidence, (text_x, text_y), font, font_scale, color, font_thickness)
+    return frame, class_count
+
+
+
+def instant_generate_frames_2(camera):
+    start_time=time.time()
+    frame_count = 0
+    while True:
+        success, frame = camera.read() 
+        if not success:   
+            break
+
+        else:
+            frame_count += 1
+            detected_objects = custom_yolo_detection(frame)
+            annotated_frame, class_count = annotate_frame(frame, detected_objects)
+
+                
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            fps = frame_count / elapsed_time
+            cv2.putText(annotated_frame, f"FPS: {fps:.2f}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
+
+            ret, buffer = cv2.imencode('.jpg',annotated_frame)
+            if not ret:
+                break
+
+        frame_bytes = buffer.tobytes()
+
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
+
+        
+
+        #time.sleep(0.008)  # Adjust the sleep time to control the frame rate'''
