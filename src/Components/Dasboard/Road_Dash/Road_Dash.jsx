@@ -20,11 +20,16 @@ const Road_Dash = () => {
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
+  function refreshPage() {
+    setTimeout(function() {
+        window.location.reload();
+    }, 10000); 
+    }
   const handleUpload = () => {
     if (selectedFile) {
       const formData = new FormData();
       formData.append('file', selectedFile);
-      fetch('https://example.com/upload', {
+      fetch('http://127.0.0.1:5000/upload_road', {
         method: 'POST',
         body: formData
       })
@@ -51,8 +56,11 @@ const Road_Dash = () => {
     </Link>
       <div className='upload_images'>
       <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+      <button onClick={() => { handleUpload(); refreshPage(); }}>Upload</button>
     </div>
+    </div>
+    <div className='upload__image_model'>
+    <img src='http://127.0.0.1:5000/show_road' alt='img-model'></img>
     </div>
       <div className='safety__Dashboard-Road-vedio-image'>
         <div className='safety__Dashboard-Road-vedio'>

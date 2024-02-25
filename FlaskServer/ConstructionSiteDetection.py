@@ -24,6 +24,37 @@ def custom_yolo_detection(frame):
     return results
 
 
+def singleImageDetection(image):
+    detection_results=model.predict(source=image, conf=0.3, verbose=False)
+
+    for result in detection_results:
+        #class_labels=result.names                                             #To use when class names unknown, adds extra computation
+        classes_present=result.boxes.cls.tolist()
+        bbox = result.boxes.xyxy.tolist()  
+        confidences=result.boxes.conf.tolist()
+        class_count = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0}
+        for (class_id, xyxy, conf) in zip(classes_present, bbox, confidences):
+            class_count[class_id] += 1
+            class_name=class_labels[class_id][0]                                 #Detected class names
+            x1, y1, x2, y2 = [int(xyxy[i]) for i in range(4)] 
+            confidence = str(round(conf,2))
+            color=class_labels[class_id][1]
+
+
+            cv2.rectangle(image, (x1, y1), (x2, y2), color, 3)
+
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            font_scale = 0.5
+            font_thickness = 1
+            text_size = cv2.getTextSize(class_name, font, font_scale, font_thickness)[0]
+            text_x = x1
+            text_y = y1 - 10                                                       #Label location adjustment
+            cv2.putText(image, class_name + ' ' + confidence, (text_x, text_y), font, font_scale, color, font_thickness)
+    return image
+
+
+
+
 def annotate_frame(frame, detection_results):  
     global class_count
     thickness = 2
@@ -83,46 +114,6 @@ def instant_generate_frames(camera):
 
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
-
-        
-
-        #time.sleep(0.008)  # Adjust the sleep time to control the frame rate'''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-        #time.sleep(0.008)  # Adjust the sleep time to control the frame rate
-
-
 def send_frames(frame_queue, frame_byte_queue):
     while True:
         generate_frames(frame_queue, frame_byte_queue)

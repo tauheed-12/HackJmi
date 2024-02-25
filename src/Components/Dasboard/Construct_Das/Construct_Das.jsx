@@ -18,6 +18,11 @@ const Construct_Das = () => {
   const nextImage = () => {
     setSelectedImageIndex((prevIndex) => (prevIndex + 1) % imgArray.length);
   };
+  function refreshPage() {
+    setTimeout(function() {
+        window.location.reload();
+    }, 10000);
+   }
   const [selectedFile, setSelectedFile] = useState(null);
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -26,7 +31,7 @@ const Construct_Das = () => {
     if (selectedFile) {
       const formData = new FormData();
       formData.append('file', selectedFile);
-      fetch('https://example.com/upload', {
+      fetch('http://127.0.0.1:5000/upload_construction', {
         method: 'POST',
         body: formData
       })
@@ -55,8 +60,11 @@ const Construct_Das = () => {
         </Link>
         <div className='upload_images'>
           <input type="file" onChange={handleFileChange} />
-          <button onClick={handleUpload}>Upload</button>
+          <button onClick={() => { handleUpload(); refreshPage(); }}>Upload</button>
         </div>
+      </div>
+      <div className='upload__image_model'>
+      <img src='http://127.0.0.1:5000/show_construction'></img>
       </div>
       <div className='safety__Dashboard-Construction-vedio-image'>
         <div className='safety__Dashboard-Construction-vedio'>
@@ -66,14 +74,13 @@ const Construct_Das = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-         {/* <div className='safety__Dashboard-Construction-OriginalImg'>
-          <div className='original-headc-help'></div>
-        </div>  */}
+         
         <div className="safety__Dashboard-Construction-ModelImage">
         <h2>Model images</h2>
           <img src={selectedImage} alt={`Image ${selectedImageIndex}`} />
         </div>
       </div>
+
       <div className='safety__Dashboard-Construction-Class'>
         <div className='safety__Dashboard-Construction-ClassList'>
           <h2>Classes List</h2>

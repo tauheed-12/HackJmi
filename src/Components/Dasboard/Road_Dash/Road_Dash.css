@@ -247,7 +247,15 @@
         width: 300px;
     }
 }
-
+.upload__image_model{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upload__image_model img{
+    width: 500px;
+    height: 500px;
+}
 @media screen and (max-width: 300px) {
     .safety__Dashboard-Road-ModelImage img{
         width: 200px;

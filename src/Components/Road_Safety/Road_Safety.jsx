@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 const Road_Safety = () => {
   const images = [Road_P1, Road_P2, Road_P3, Road_P4, Road_P5];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
