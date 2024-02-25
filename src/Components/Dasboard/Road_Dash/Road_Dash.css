@@ -1,16 +1,22 @@
-.safety__Dashboard-Road {
+.safety__Dashboard-Road{
     width: 100%;
     padding: 2rem 0rem;
 }
-.dash-head-help{
+.dashc-head-help{
     height: 10px;
     background-color: darkblue;
     width: 10%;
     margin-bottom: 2rem;
     transition: width 0.3s ease-in;
 }
-.dash-head-help:hover{
+.dashc-head-help:hover{
     width: 20%;
+}
+.safety__Dashboard-Road-vedio-image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 2rem;
 }
 .safety__Dashboard-Road-vedio h1{
     font-size: 3rem;
@@ -19,15 +25,22 @@
 }
 .safety__Dashboard-Road-vedio {
     display: flex;
-    width: 100%;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem 0rem;
+    margin-right: 0;
+    margin-left: 5rem;
+    padding-right: 0;
 }
-
+.safety__Dashboard-Road-vedio h1{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
 .safety__Dashboard-Road-vedio video {
-    width: 60%;
+    width: 100%;
+    min-width: 400px;
     height: 100%;
     box-shadow: 3px 3px 15px grey;
     border: 5px solid grey;
@@ -36,6 +49,7 @@
 .safety__Dashboard-Road-OriginalImg{
     width: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -45,18 +59,61 @@
     font-size: 3rem;
     margin-bottom: 5px;
 }
-
-.safety__Dashboard-Road-ModelImage{
+.safety_button_form{
     display: flex;
     align-items: center;
+    height: 100px;
+    padding: 2rem 0;
+    margin: 2rem;
     justify-content: center;
-    padding: 2rem 2rem;
+    gap: 10%;
+}
+.live__stream_button button{
+    width: 400px;
+    height: 100px;
+    background-color: blue;
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 3rem;
+    border: none;
+    border-radius: 10px;
+}
+.upload_images{
+    height: 50px;
+    margin-top: 2rem;
+}
+.upload_images input{
+     width: 300px;
+     height: 50px;
+     font-size: 2rem;
+}
+.upload_images button{
+    width: 200px;
+    height: 80px;
+    color: white;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: blue;
+    border: none;
+}
+.safety__Dashboard-Road-ModelImage{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0rem;
     gap: 20px;
     flex-wrap: wrap;
 }
+.safety__Dashboard-Road-ModelImage h2{
+    font-size: 2.5rem;
+}
 .safety__Dashboard-Road-ModelImage img{
     box-shadow: 9px 9px 15px grey;
-    width: 600px;
+    width: 800px;
+    height: auto;
     border-radius: 10px;
 }
 .safety__Dashboard-Road-HeadImg{
@@ -64,13 +121,13 @@
     justify-content: center;
     align-items: center;
 }
-.original-head-help{
+.original-headc-help{
     width: 10%;
     height: 10px;
     background-color: darkblue;
     transition: width 0.3s ease-in;
 }
-.original-head-help:hover{
+.original-headc-help:hover{
     width: 20%;
 }
 .safety__Dashboard-Class{
@@ -104,12 +161,10 @@
 }
 .safety__Dashboard-Road-ClassList li{
     font-size: 2.5rem;
-    background-color: blue;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     border-radius: 5px;
-    color: white;
     list-style: circle;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 .safety__Dashboard-Road-Labels{
     flex: 2;
@@ -127,6 +182,9 @@
     height: auto;
     box-shadow: 6px 6px 15px grey;
 }
+.safety__Dashboard-Road ul{
+    margin-left: 0;
+}
 .labels-head-help{
     width: 15%;
     height: 10px;
@@ -136,9 +194,6 @@
 }
 .labels-head-help:hover{
     width: 25%;
-}
-.safety__Dashboard-Road-Class ul{
-    margin-left: 0;
 }
 
 .stream{
@@ -152,10 +207,18 @@
     .safety__Dashboard-Road-ModelImage img{
         width: 400px;
     }
-}
-@media screen and (max-width:1250px) {
-    .safety__Dashboard-Road-ModelImage img{
-        width: 400px;
+    .live__stream_button button{
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .upload_images input{
+        font-size: 20px;
+    }
+    .upload_images button{
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
     }
 }
 

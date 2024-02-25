@@ -12,6 +12,12 @@
 .dashc-head-help:hover{
     width: 20%;
 }
+.safety__Dashboard-Construction-vedio-image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 2rem;
+}
 .safety__Dashboard-Construction-vedio h1{
     font-size: 3rem;
     text-align: center;
@@ -19,15 +25,21 @@
 }
 .safety__Dashboard-Construction-vedio {
     display: flex;
-    width: 100%;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem 0rem;
+    margin-right: 0;
+    margin-left: 5rem;
+    padding-right: 0;
 }
-
+.safety__Dashboard-Construction-vedio h1{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
 .safety__Dashboard-Construction-vedio video {
-    width: 60%;
+    width: 100%;
     height: 100%;
     box-shadow: 3px 3px 15px grey;
     border: 5px solid grey;
@@ -36,6 +48,7 @@
 .safety__Dashboard-Construction-OriginalImg{
     width: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,10 +79,11 @@
 }
 .upload_images{
     height: 50px;
+    margin-top: 2rem;
 }
 .upload_images input{
-     width: 400px;
-     height: 100px;
+     width: 300px;
+     height: 50px;
      font-size: 2rem;
 }
 .upload_images button{
@@ -84,15 +98,21 @@
 }
 .safety__Dashboard-Construction-ModelImage{
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
-    padding: 2rem 2rem;
+    flex-direction: column;
+    padding: 2rem 0rem;
     gap: 20px;
     flex-wrap: wrap;
 }
+.safety__Dashboard-Construction-ModelImage h2{
+    font-size: 2.5rem;
+}
 .safety__Dashboard-Construction-ModelImage img{
     box-shadow: 9px 9px 15px grey;
-    width: 600px;
+    width: 800px;
+    height: auto;
     border-radius: 10px;
 }
 .safety__Dashboard-Construction-HeadImg{
@@ -140,12 +160,10 @@
 }
 .safety__Dashboard-Construction-ClassList li{
     font-size: 2.5rem;
-    background-color: blue;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     border-radius: 5px;
-    color: white;
     list-style: circle;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 .safety__Dashboard-Construction-Labels{
     flex: 2;
@@ -187,6 +205,19 @@
 @media screen and (max-width:1250px) {
     .safety__Dashboard-Construction-ModelImage img{
         width: 400px;
+    }
+    .live__stream_button button{
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .upload_images input{
+        font-size: 20px;
+    }
+    .upload_images button{
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
     }
 }
 
